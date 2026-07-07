@@ -10,7 +10,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://localhost:5173'],
+  origin: ['https://zypcart.wuaze.com/', 'https://zypcart.wuaze.com/'],
   credentials: true
 }))
 app.use(express.json())
