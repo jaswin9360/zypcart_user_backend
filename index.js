@@ -10,7 +10,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-  origin: ['https://zypcart.wuaze.com/', 'https://zypcart.wuaze.com/'],
+  origin: ['https://zypcart.wuaze.com/'],
   credentials: true
 }))
 app.use(express.json())
