@@ -12,6 +12,7 @@ const  addressController =require("../controllers/addressController")
 const { githubAuth } = require('../controllers/authControllerGit')
 const { forgotPassword } = require('../controllers/authControllerPassword')
 const {  verifyOtpAndSendPassword } = require('../controllers/authControllerPassword')
+const {uauth}=require("../controllers/authControllerUauth")
 const profileController = require('../controllers/profileController');
 
 
@@ -25,6 +26,7 @@ router.post('/forgot_password', forgotPassword)
 router.post('/register', registerUser)
 router.post('/login', loginUser)
 router.get('/:userId/profile',  getProfile)
+router.post("/uauth",uauth)
 router.post('/:userId/setup_pin',  profileController.setupPin)
 router.post('/:userId/verify_pin',  profileController.verifyPin)
 router.post('/:userId/change_pin',  profileController.changePinWithPassword)
